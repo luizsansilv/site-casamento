@@ -24,7 +24,7 @@ main {
    
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("/assets/img/casamento.png");
+        url("../../assets/img/casamento.png");
 
     background-size: cover;
     background-position: center;
