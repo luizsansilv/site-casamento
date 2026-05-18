@@ -55,7 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
             iniciarContagem(); // inicia só depois que o HTML foi injetado
   });
 
-    function iniciarContagem() {
+   
+
+});
+
+ function iniciarContagem() {
         const WEDDING = new Date("2028-03-20 16:00:00");
 
         function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
@@ -75,6 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
             tick();
             setInterval(tick, 1000);
         }
-
-});
-
