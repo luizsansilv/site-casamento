@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const basePath = isGitHubPages ? "/site-casamento/" : isInPageFolder 
     ? "../" : "./";
 
+    const linkBase = isGitHubPages ? "/site-casamento/" : "/";
+
     // MENU
     fetch(`${basePath}components/menu.html`)
         .then(res => {
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
              // Corrige os links com o basePath correto
             document.querySelectorAll("#menu [data-path]").forEach(link => {
-                link.setAttribute("href", basePath + link.getAttribute ("data-path"));
+                link.setAttribute("href", linkBase + link.getAttribute ("data-path"));
                 });
 
             const toggle = document.getElementById("menu-toggle");
