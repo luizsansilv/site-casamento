@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             document.getElementById("menu-container").innerHTML = data;
 
+             // Corrige os links com o basePath correto
+            document.querySelectorAll("#menu [data-path]").forEach(link => {
+                link.setAttribute("href", basePath + link.getAttribute ("data-path"));
+                });
+
             const toggle = document.getElementById("menu-toggle");
             const menu = document.getElementById("menu");
 
